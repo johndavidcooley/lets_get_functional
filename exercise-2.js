@@ -37,7 +37,7 @@ function maxOfThree(num1, num2, num3){
 
 function isVowel(char){
 	var vowels = ["a", "e", "i", "o", "u"];
-	if char() {
+	if(char === vowels[0] || char === vowels[1] || char === vowels[2] || char === vowels[3] || char === vowels[4]) {
 		return true;
 	} else {
 		return false;
