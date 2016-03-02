@@ -57,25 +57,40 @@ function rovarspraket(phrase){
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(){
-    //...
-}
+function reverse(string){
+	var stringToArray = string.split('');
+    var reversedArray = stringToArray.reverse();
+    var revArrayToRevString = reversedArray.join('');
+    return revArrayToRevString;
+};
+
 
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 // ---------------------
 
-function findLongestWord(words){
-    //...
-}
+function filterLongWords(words, i){
+	var longWords = words.filter(function(currentWord) {
+		if(currentWord.length >= i) {
+			return currentWord;
+		} else {
+			return "";
+		}
+	})
+	return longWords;
+};
 
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
 
 function filterLongWords(words, i){
-    //...
-}
+//     var wordList = ["a", "be", "can", "dill", "every", "friend", "glamour", "Hawaiian", "Indonesia", "JavaScript"];
+//     var longWords = filter.words(function(currentWord) {
+//     	var isLong = currentWord >= i;
+//     	return isLong;
+//     })
+// };
 
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
